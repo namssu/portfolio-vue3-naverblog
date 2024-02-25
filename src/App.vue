@@ -8,20 +8,20 @@
   </div>
 
 
-  <div class="d-flex justify-content-between border-bottom mx-4 py-3">
+  <div v-for="(otherpost, i) in otherpost" :key="i" class="d-flex justify-content-between border-bottom mx-4 py-3">
     <div>
-      <h5 class="fw-bold mb-3">맛집 탐방하기</h5>
-      <p class="fs-6 text-secondary">보라 • 2024.02.25</p>
+      <h5 class="fw-bold mb-3">{{ otherpost.title }}</h5>
+      <p class="fs-6 text-secondary">{{ otherpost.user }} • {{ otherpost.date }}</p>
       <div class="d-flex gap-1 fs-6 text-secondary">
         <i class="bi bi-heart"></i>
-        <p>1</p>
+        <p>{{ otherpost.likenum }}</p>
         <i class="bi bi-chat-dots"></i>
-        <p>5</p>
+        <p>{{ otherpost.commentnum }}</p>
       </div>
     </div>
 
     <div class="overflow-hidden  border rounded otherpostimg">
-      <img src="https://cdn.imweb.me/thumbnail/20230522/31017371829ad.jpg" class="w-100 h-100 object-fit-cover">
+      <img :src="otherpost.image" class="w-100 h-100 object-fit-cover">
     </div>
   </div>
 
@@ -37,10 +37,15 @@
 </template>
 
 <script>
-
+import otherpost from './data/otherpost.js'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      otherpost : otherpost
+    }
+  }
 
 }
 </script>
