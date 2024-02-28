@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center mb-4 px-4">
+  <div class="d-flex justify-content-between align-items-center my-4 px-4" >
     <h4 class="fw-bold">추천</h4>
     <div class="d-flex align-items-center gap-1">
       <i class="bi bi-search fs-5"></i>
