@@ -4,6 +4,8 @@
 
   <Container v-if="step == 2" :otherpost="otherpost"/>
 
+  <Mynotification/>
+
   <Mypost v-if="step == 5" :mypost="mypost" />
 
   <nav v-if="step !== 3" class="d-flex justify-content-around align-items-center py-2 fs-5">
@@ -19,9 +21,11 @@
 <script>
 import otherpost from "./data/otherpost.js"
 import mypost from "./data/mypost.js"
+
 import Container from "./components/Container.vue"
 import Writepost from "./components/Writepost.vue"
 import Mypost from "./components/Mypost.vue"
+import Mynotification from "./components/Mynotification.vue"
 
 
 export default {
@@ -37,6 +41,7 @@ export default {
     Container: Container,
     Writepost: Writepost,
     Mypost: Mypost,
+    Mynotification: Mynotification,
   },
 };
 </script>
