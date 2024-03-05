@@ -8,7 +8,7 @@ export default [
     date: 20240221,
     likenum: 24,
     commentnum: 1,
-    myfollowing: 1
+    following: 1
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ export default [
     date: 20240219,
     likenum: 110,
     commentnum: 24,
-    myfollowing: 0
+    following: 0
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export default [
     date: 20240201,
     likenum: 1,
     commentnum: 1,
-    myfollowing: 1
+    following: 1
   },
   {
     id: 3,
@@ -41,6 +41,6 @@ export default [
     date: 20240127,
     likenum: 1,
     commentnum: 1,
-    myfollowing: 0
+    following: 0
   }
 ];

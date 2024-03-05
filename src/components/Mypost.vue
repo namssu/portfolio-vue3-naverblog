@@ -7,22 +7,29 @@
   </div>
 
   <div class="text-center position-relative pt-5">
-    <div class="overflow-hidden border rounded-circle profilebox position-absolute top-0 start-50 translate-middle">
+    <div
+      class="overflow-hidden border rounded-circle profilebox position-absolute top-0 start-50 translate-middle"
+    >
       <img
-        src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png" class="w-100 h-100 object-fit-cover"
+        src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+        class="w-100 h-100 object-fit-cover"
       />
     </div>
     <h6 class="fw-bold">남쑤</h6>
     <p class="fs-6 text-secondary">일상 • 2명의 이웃</p>
   </div>
 
-  <div class="my-4 px-4 py-3" style="border-top: 7px solid #efefef; border-bottom: 5px solid #eee">
+  <div
+    class="my-4 px-4 py-3"
+    style="border-top: 7px solid #efefef; border-bottom: 5px solid #eee"
+  >
     <h6 class="fw-bold mb-4">인기글</h6>
     <div class="d-flex">
       <div>
         <div class="overflow-hidden border rounded otherpostimg mb-2">
           <img
-            src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png" class="w-100 h-100 object-fit-cover"
+            src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+            class="w-100 h-100 object-fit-cover"
           />
         </div>
         <h6 class="fw-b">공릉맛집</h6>
@@ -31,36 +38,48 @@
   </div>
 
   <div class="mx-4">
-    <h6 class="fw-bold mb-4">전체글</h6>
-    <div v-for="(mypost, i) in mypost" :key="i" class="d-flex justify-content-between border-bottom py-3">
-      <div>
-        <h5 class="fw-bold mb-2">{{ mypost.title  }}</h5>
-        <p class="fs-6 text-secondary">{{ mypost.subtitle }}</p>
+    <h6 class="fw-bold mb-2">전체글</h6>
+
+    <div
+      v-for="(mypost, i) in mypost"
+      :key="i"
+      class="border-bottom py-3"
+    >
+      <div class="d-flex justify-content-between">
         <p class="fs-6 text-secondary">{{ mypost.date }}</p>
-        <div class="d-flex gap-1 fs-6 text-secondary">
-          <i class="bi bi-heart"></i>
-          <p>{{ mypost.likenum }}</p>
-          <i class="bi bi-chat-dots"></i>
-          <p>{{ mypost.commentnum }}</p>
-        </div>
+        <p class="fs-6 text-secondary">{{ mypost.readnum }} 읽음</p>
       </div>
 
-      <div class="overflow-hidden border rounded otherpostimg">
-        <img
-          :src="mypost.image"
-          class="w-100 h-100 object-fit-cover"
-        />
+      <div class="overflow-hidden border rounded w-100 mb-3" style="height: 200px">
+        <img :src="mypost.image" class="w-100 h-100 object-fit-cover" />
+      </div>
+
+      <div>
+        <h5 class="fw-bold mb-2">{{ mypost.title }}</h5>
+        <p class="fs-6 text-secondary">{{ mypost.subtitle }}</p>
+
+        <div class="d-flex justify-content-between fs-5">
+          <div class="d-flex gap-1 text-secondary">
+            <i class="bi bi-heart text-danger"></i>
+            <p style="margin-right: 10px;">{{ mypost.likenum }}</p>
+            <i class="bi bi-chat-dots"></i>
+            <p>{{ mypost.commentnum }}</p>
+          </div>
+          <i class="bi bi-box-arrow-up"></i>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="m-box"></div>
 </template>
 
 <script>
 export default {
   name: "MypostVue",
   props: {
-    mypost : Array,
-  }
+    mypost: Array,
+  },
 };
 </script>
 

@@ -14,12 +14,14 @@
       <i class="bi bi-heart text-danger fs-5"></i>
       <p class="fs-7">공감</p>
     </div>
-    <div class="w-100">
+    <div class="w-100 pt-1">
       <p>제인님이 <b>공릉역 카페 추천 글</b>에 공감합니다.<br>
         <span class="fs-7 text-secondary">1시간 전</span></p>
     </div>
     <i class="bi bi-x-lg"></i>
   </div>
+
+  <div class="m-box"></div>
 </template>
 
 <script>

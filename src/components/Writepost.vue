@@ -1,7 +1,7 @@
 <template>
   <div v-if="step == 3" class="w-100 h-100">
     <div class="d-flex justify-content-between align-items-center my-3 px-4 pb-2 border-bottom position-absolute top-0 start-0 w-100">
-      <button class="btn">취소</button>
+      <button @click="$emit('closeTab')" class="btn">취소</button>
       <select class="border-0">
         <option>맛집</option>
         <option>카페</option>
