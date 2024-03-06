@@ -2,7 +2,11 @@
 
   <Neighborpost v-if="step == 1" :otherpost = "otherpost"/>
   
-  <Writepost :step="step" @closeTab="step = 1"/>
+  <Writepost :step="step" 
+  @closeTab = "step = 1" 
+  @addPost = "publishPost" 
+  @newTitle = "newTitle = $event"
+  @newContent = "newContent = $event"/>
 
   <Container v-if="step == 2" :otherpost="otherpost"/>
 
@@ -38,6 +42,8 @@ export default {
       otherpost: otherpost,
       mypost: mypost,
       step : 2,
+      newTitle : '',
+      newContent : '',
     };
   },
   components: {
@@ -47,6 +53,22 @@ export default {
     Mypost: Mypost,
     Mynotification: Mynotification,
   },
+  methods : {
+    publishPost() {
+      var newPost = {
+      id: 0,
+      image: "https://cdnimage.dailian.co.kr/news/202001/news_1578966048_861100_m_1.jpeg",
+      title: this.newTitle,
+      subtitle: this.newContent,
+      date: 20240219,
+      likenum: 0,
+      readnum: 0,
+      commentnum: 0,
+      };
+      this.mypost.unshift(newPost);
+      this.step = 5;
+    }
+  }
 }
 </script>
 

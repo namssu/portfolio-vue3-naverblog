@@ -6,12 +6,12 @@
         <option>맛집</option>
         <option>카페</option>
       </select>
-      <button class="btn">등록</button>
+      <button @click="$emit('addPost')" class="btn">등록</button>
     </div>
 
     <div class="px-4 h-100 d-flex flex-column" style="margin-top:80px;">
-      <input type="text" placeholder="제목" class="border-bottom py-3 fs-2 w-100 border-0" style="height: 80px"/>
-      <textarea class="w-100" style="height: 400px; resize: none;"></textarea>
+      <input @input="$emit('newTitle', $event.target.value)" type="text" placeholder="제목" class="border-bottom py-3 fs-2 w-100 border-0" style="height: 80px"/>
+      <textarea @input="$emit('newContent', $event.target.value)" class="w-100 border-0" style="height: 400px; resize: none;"></textarea>
     </div>
 
     <div class="d-flex gap-2 py-1 px-4 py-2 fs-4 border-top position-absolute bottom-0 start-0 w-100" style=" background: #fff; height:40px;">
@@ -28,7 +28,7 @@ export default {
   name : 'WritepostVue',
   props : {
     step : Number,
-  }
+  },
 }
 </script>
 
