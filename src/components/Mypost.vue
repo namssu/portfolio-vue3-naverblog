@@ -1,6 +1,6 @@
 <template>
   <div class="mypostbg">
-    <div class="text-center text-white pt-5">
+    <div class="text-center pt-5">
       <p>오늘 3 • 전체 1,056</p>
       <h5 class="fw-bold">남쑤의 블로그</h5>
     </div>
@@ -11,7 +11,7 @@
       class="overflow-hidden border rounded-circle profilebox position-absolute top-0 start-50 translate-middle"
     >
       <img
-        src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+        src="https://cdn.pixabay.com/photo/2019/05/28/05/47/puppy-4234435_1280.jpg"
         class="w-100 h-100 object-fit-cover"
       />
     </div>
@@ -25,14 +25,14 @@
   >
     <h6 class="fw-bold mb-4">인기글</h6>
     <div class="d-flex">
-      <div>
-        <div class="overflow-hidden border rounded otherpostimg mb-2">
+      <div v-for="(mypost, j) in mypost.filter((a) => a.readnum >= 50)" :key="j" style="margin-right: 15px;">
+        <div class="overflow-hidden border rounded otherpostimg mb-3">
           <img
-            src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+            :src="mypost.image"
             class="w-100 h-100 object-fit-cover"
           />
         </div>
-        <h6 class="fw-b">공릉맛집</h6>
+        <h6 class="fw-bold">{{ mypost.title }}</h6>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@ export default {
 
 <style>
 .mypostbg {
-  background: skyblue;
+  background: #dfdfef;
   height: 200px;
 }
 .profilebox {
