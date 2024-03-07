@@ -7,11 +7,11 @@
     </div>
   </div>
 
-  <div v-for="(otherpost, i) in otherpost.filter((c) => c.following === 1)" :key="i" class="border-bottom mx-4 py-3">
+  <div v-for="(otherpost, i) in otherpost.filter((c) => c.following === 1)" :key="i" class="border-bottom mx-4 py-3" >
     <div class="d-flex justify-content-between">
       <div class="d-flex gap-2">
         <div class="overflow-hidden border rounded-circle profilebox pr-3">
-          <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"/>
+          <img :src="otherpost.userimage"/>
         </div>
         <p class="fs-6">
           {{ otherpost.user }}<br>
@@ -21,8 +21,8 @@
       <i class="bi bi-three-dots-vertical fs-5"></i>
     </div>
 
-    <div class="overflow-hidden border rounded w-100 mb-3" >
-      <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png" class="w-100 h-100 object-fit-cover"/>
+    <div class="overflow-hidden border rounded w-100 mb-3" style="height: 300px">
+      <img :src="otherpost.image" class="w-100 h-100 object-fit-cover"/>
     </div>
     
     <div>

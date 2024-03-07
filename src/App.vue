@@ -7,7 +7,7 @@
   @addPost = "publishPost" 
   @newTitle = "newTitle = $event"
   @newContent = "newContent = $event"/>
-
+  
   <Container v-if="step == 2" :otherpost="otherpost"/>
 
   <Mynotification v-if="step == 4"/>
@@ -57,7 +57,7 @@ export default {
     publishPost() {
       var newPost = {
       id: 0,
-      image: "https://cdnimage.dailian.co.kr/news/202001/news_1578966048_861100_m_1.jpeg",
+      image: "",
       title: this.newTitle,
       subtitle: this.newContent,
       date: 20240219,

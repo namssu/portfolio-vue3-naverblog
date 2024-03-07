@@ -50,7 +50,7 @@
         <p class="fs-6 text-secondary">{{ mypost.readnum }} 읽음</p>
       </div>
 
-      <div class="overflow-hidden border rounded w-100 mb-3" style="height: 200px">
+      <div class="overflow-hidden border rounded w-100 mb-3" style="height: 300px">
         <img :src="mypost.image" class="w-100 h-100 object-fit-cover" />
       </div>
 
