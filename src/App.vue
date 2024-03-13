@@ -48,6 +48,7 @@ export default {
       newTitle: "",
       newContent: "",
       newImage: "",
+      newDate: "",
     };
   },
   components: {
@@ -58,13 +59,21 @@ export default {
     Mynotification: Mynotification,
   },
   methods: {
+    currentDate() {
+      const current = new Date();
+      this.newDate =
+        current.getFullYear() +
+        (current.getMonth() + 1).toString().padStart(2, "0") +
+        current.getDate();
+    },
     publishPost() {
+      this.currentDate();
       var newPost = {
         id: 0,
         image: this.newImage,
         title: this.newTitle,
         subtitle: this.newContent,
-        date: 20240219,
+        date: this.newDate,
         likenum: 0,
         readnum: 0,
         commentnum: 0,
@@ -73,18 +82,18 @@ export default {
       this.step = 5;
     },
     handleFileUpload(event) {
-    const file = event.target.files[0]; // input에서 선택된 첫 번째 파일
-    if (file) {
-      // 선택된 파일이 있을 경우, 이를 처리하는 upload 메소드 호출
-      this.upload(file);
-    }
-  },
-  upload(file) {
-    // 앞서 안내 드린 수정된 upload 함수 내용
-    let newUrl = URL.createObjectURL(file);
-    console.log(newUrl); // 새로운 URL 로깅
-    this.newImage = file; // file 객체를 newImage에 할당
-  }
+      const file = event.target.files[0]; // input에서 선택된 첫 번째 파일
+      if (file) {
+        // 선택된 파일이 있을 경우, 이를 처리하는 upload 메소드 호출
+        this.upload(file);
+      }
+    },
+    upload(file) {
+      // 앞서 안내 드린 수정된 upload 함수 내용
+      let newUrl = URL.createObjectURL(file);
+      console.log(newUrl); // 새로운 URL 로깅
+      this.newImage = file; // file 객체를 newImage에 할당
+    },
 
   },
 };
