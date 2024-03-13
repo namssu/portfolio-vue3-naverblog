@@ -7,6 +7,7 @@
     @addPost="publishPost"
     @newTitle="newTitle = $event"
     @newContent="newContent = $event"
+    @newImage="newImage = $event"
   />
 
   <Container v-if="step == 2" :otherpost="otherpost" />
