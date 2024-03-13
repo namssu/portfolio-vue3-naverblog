@@ -11,10 +11,12 @@
 
     <div class="px-4 h-100 d-flex flex-column" style="margin-top:80px;">
       <input @input="$emit('newTitle', $event.target.value)" type="text" placeholder="제목" class="border-bottom py-3 fs-2 w-100 border-0" style="height: 80px"/>
-      <textarea @input="$emit('newContent', $event.target.value)" class="w-100 border-0" style="height: 400px; resize: none;"></textarea>
+      <textarea @input="$emit('newContent', $event.target.value)" class="w-100 border-0 mb-3" style="height: 400px; resize: none;"> </textarea>
+      <input @change="$emit('newImage', $event.target.value)" type="file" id="file" class="d-none" > 
+      <label for="file" class="border input-plus">+</label>
     </div>
 
-    <div class="d-flex gap-2 py-1 px-4 py-2 fs-4 border-top position-absolute bottom-0 start-0 w-100" style=" background: #fff; height:40px;">
+    <div class="d-flex gap-2 py-2 px-4 fs-3 border-top position-absolute bottom-0 start-0 w-100" style=" background: #fff; height:40px;">
       <i class="bi bi-justify-left"></i>
       <i class="bi bi-type-bold"></i>
       <i class="bi bi-type-italic"></i>
@@ -33,5 +35,12 @@ export default {
 </script>
 
 <style>
+.input-plus {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
 
 </style>
