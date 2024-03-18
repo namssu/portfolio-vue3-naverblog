@@ -6,6 +6,7 @@ export default [
     user: "제인로그",
     userimage: "https://cdn.pixabay.com/photo/2023/12/11/12/03/tawny-owl-8443456_960_720.jpg",
     date: 20240221,
+    liked: 0,
     likenum: 24,
     commentnum: 1,
     following: 1
@@ -17,6 +18,7 @@ export default [
     user: "맛집로그",
     userimage: "https://cdn.pixabay.com/photo/2023/11/29/21/05/animal-8420313_640.jpg",
     date: 20240219,
+    liked: 0,
     likenum: 110,
     commentnum: 24,
     following: 0
@@ -28,6 +30,7 @@ export default [
     user: "셩온더트립",
     userimage: "https://cdn.pixabay.com/photo/2023/12/08/05/38/cat-8436843_960_720.jpg",
     date: 20240201,
+    liked: 0,
     likenum: 1,
     commentnum: 1,
     following: 1
@@ -39,6 +42,7 @@ export default [
     user: "신상털이범",
     userimage: "https://cdn.pixabay.com/photo/2023/08/08/15/15/strawberries-8177601_640.jpg",
     date: 20240127,
+    liked: 0,
     likenum: 1,
     commentnum: 1,
     following: 0
