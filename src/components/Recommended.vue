@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name : 'ContainerVue',
+  name : 'RecommendedVue',
   props : {
     otherpost : Array,
   }

@@ -1,6 +1,8 @@
 <template>
   <Neighborpost v-if="step == 1" :otherpost="otherpost" />
 
+  <Recommended v-if="step == 2" :otherpost="otherpost" />
+
   <Writepost
     :step="step"
     @closeTab="step = 1"
@@ -9,8 +11,6 @@
     @newContent="newContent = $event"
     @newImage="newImage = $event"
   />
-
-  <Container v-if="step == 2" :otherpost="otherpost" />
 
   <Mynotification v-if="step == 4" />
 
@@ -32,7 +32,7 @@
 import otherpost from "./data/otherpost.js";
 import mypost from "./data/mypost.js";
 
-import Container from "./components/Container.vue";
+import Recommended from "./components/Recommended.vue";
 import Writepost from "./components/Writepost.vue";
 import Mypost from "./components/Mypost.vue";
 import Mynotification from "./components/Mynotification.vue";
@@ -52,7 +52,7 @@ export default {
     };
   },
   components: {
-    Container: Container,
+    Recommended: Recommended,
     Neighborpost: Neighborpost,
     Writepost: Writepost,
     Mypost: Mypost,
