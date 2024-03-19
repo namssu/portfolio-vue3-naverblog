@@ -1,7 +1,7 @@
 export default [
   {
     id: 0,
-    image: "/img/mypostpic-1.jpg",
+    image: "./img/mypostpic-1.jpg",
     title: "논현역 맛집 추천",
     subtitle: "오랜만에 친구랑 만나기로 한 날, 논현역에 맛집 한참 찾다가 선택...",
     date: 20240219,
@@ -12,7 +12,7 @@ export default [
   },
   {
     id: 1,
-    image: "/img/mypostpic-2.jpg",
+    image: "./img/mypostpic-2.jpg",
     title: "강남역 카페 추천",
     subtitle: "오랜만에 친구랑 만나기로 한 날, 강남역의 샌드위치 맛집을 찾아...",
     date: 20240203,
@@ -23,7 +23,7 @@ export default [
   },
   {
     id: 2,
-    image: "/img/mypostpic-3.jpg",
+    image: "./img/mypostpic-3.jpg",
     title: "노원역 맛집 추천",
     subtitle: "일정이 끝난 뒤 맛집을 찾아보다가 파스타가 땡겨서 제임스키친에...",
     date: 20240126,
@@ -34,7 +34,7 @@ export default [
   },
   {
     id: 3,
-    image: "/img/mypostpic-4.jpg",
+    image: "./img/mypostpic-4.jpg",
     title: "공릉역 카페 추천",
     subtitle: "공리단길이 생기고 나서 카페가 많이 생겼는데요...",
     date: 20231201,
