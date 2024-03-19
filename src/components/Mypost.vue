@@ -60,7 +60,7 @@
 
         <div class="d-flex justify-content-between fs-5">
           <div class="d-flex gap-1 text-secondary">
-            <i class="bi bi-heart text-danger"></i>
+            <i @click="$store.commit('likemypost', mypost.id)"  :class="[mypost.liked == 1 ? 'bi-heart-fill' : 'bi-heart']" class="text-danger"></i>
             <p style="margin-right: 10px;">{{ mypost.likenum }}</p>
             <i class="bi bi-chat-dots"></i>
             <p>{{ mypost.commentnum }}</p>
