@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div v-for="(otherpost, i) in otherpost.filter((c) => c.following === 1)" :key="i" class="border-bottom mx-4 py-3" >
+  <div v-for="(otherpost, i) in otherpost.filter((i) => i.following == 1)" :key="i" class="border-bottom mx-4 py-3" >
     <div class="d-flex justify-content-between">
       <div class="d-flex gap-2">
         <div class="overflow-hidden border rounded-circle profilebox pr-3">
@@ -31,7 +31,7 @@
 
       <div class="d-flex justify-content-between fs-6">
         <div class="d-flex gap-1 text-secondary">
-          <i class="bi bi-heart text-danger"></i>
+          <i @click="$store.commit('likeotherpost', otherpost.id)" :class="[otherpost.liked == 1 ? 'bi-heart-fill' : 'bi-heart']" class="text-danger"></i>
           <p style="margin-right: 10px">{{ otherpost.likenum }}</p>
           <i class="bi bi-chat-dots"></i>
           <p>{{ otherpost.commentnum }}</p>

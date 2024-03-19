@@ -18,7 +18,7 @@
         {{ otherpost.user }} • {{ otherpost.date }}
       </p>
       <div class="d-flex gap-1 fs-6 text-secondary">
-        <i @click="$store.commit('likeotherpost', i)" class="bi bi-heart"></i>
+        <i @click="$store.commit('likeotherpost', otherpost.id)"  :class="[otherpost.liked == 1 ? 'bi-heart-fill' : 'bi-heart']" class="text-danger"></i>
         <p>{{ otherpost.likenum }}</p>
         <i class="bi bi-chat-dots"></i>
         <p>{{ otherpost.commentnum }}</p>

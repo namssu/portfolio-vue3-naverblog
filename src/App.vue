@@ -20,11 +20,11 @@
     v-if="step !== 3"
     class="d-flex justify-content-around align-items-center py-2 fs-5 shadow"
   >
-    <i @click="step = 1" :class="[step == 1 ? 'bi-postcard-fill' : 'bi-postcard', bi]"></i>
-    <i @click="step = 2" :class="[step == 2 ? 'bi-compass-fill' : 'bi-compass', bi]" ></i>
+    <i @click="step = 1" :class="[step == 1 ? 'bi-postcard-fill' : 'bi-postcard']"></i>
+    <i @click="step = 2" :class="[step == 2 ? 'bi-compass-fill' : 'bi-compass']" ></i>
     <i @click="step = 3" class="bi bi-pencil"></i>
-    <i @click="step = 4" :class="[step == 4 ? 'bi-bell-fill' : 'bi-bell', bi]"></i>
-    <i @click="step = 5" :class="[step == 5 ? 'bi-person-fill' : 'bi-person', bi]"></i>
+    <i @click="step = 4" :class="[step == 4 ? 'bi-bell-fill' : 'bi-bell']"></i>
+    <i @click="step = 5" :class="[step == 5 ? 'bi-person-fill' : 'bi-person']"></i>
   </nav>
 </template>
 
